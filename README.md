@@ -2,10 +2,6 @@
 Random Team Generator (Frontend)
 A frontend application built with React, Vite, and Tailwind CSS. This project allows users to generate random teams based on a list of participants.
 
-# React + Vite + Tailwind CSS Project
-
-This repository contains the front-end code for [Your Project Name/Description]. It's built using React, Vite for fast development, and Tailwind CSS for utility-first styling.
-
 ## Technologies Used
 
 * **React:** JavaScript library for building user interfaces.
