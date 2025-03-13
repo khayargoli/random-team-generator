@@ -10,7 +10,7 @@ const PlayerList = () => {
     const [playerToDelete, setPlayerToDelete] = useState(null);
     const inputRef = useRef(null);
 
-    // Fetch players from the back-end
+    // Fetch players 
     useEffect(() => {
         const fetchPlayers = async () => {
             try {
@@ -48,7 +48,7 @@ const PlayerList = () => {
             const updatedPlayer = { name: newName };
             const data = await apiClient.put(`/api/players/${id}`, updatedPlayer);
 
-            // Update the player in the list
+            // Update the player
             setPlayers(
                 players.map((player) =>
                     player._id === id ? { ...player, name: data.name } : player
@@ -64,7 +64,7 @@ const PlayerList = () => {
             const updatedPlayer = { skill: newSkill };
             const data = await apiClient.put(`/api/players/${id}`, updatedPlayer);
 
-            // Update the player in the list
+            // Update the player
             setPlayers(
                 players.map((player) =>
                     player._id === id ? { ...player, skill: data.skill } : player

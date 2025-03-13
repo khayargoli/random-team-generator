@@ -48,7 +48,6 @@ const PlayerItem = forwardRef(({ player, onUpdateName, onUpdateSkill, onDelete }
         ))}
       </div>
 
-      {/* Delete Button */}
       <button
         onClick={() => onDelete(player._id)}
         className="px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600"

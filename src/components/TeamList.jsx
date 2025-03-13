@@ -10,7 +10,7 @@ const TeamList = () => {
     const [teamToDelete, setTeamToDelete] = useState(null);
     const inputRef = useRef(null);
 
-    // Fetch teams from the back-end
+    // Fetch teams
     useEffect(() => {
         const fetchTeams = async () => {
             try {
@@ -82,7 +82,6 @@ const TeamList = () => {
     return (
         <>
             <div className="space-y-2">
-
                 {teams.map((team) => (
                     <TeamItem
                         key={team._id}
@@ -92,7 +91,6 @@ const TeamList = () => {
                         ref={inputRef}
                     />
                 ))}
-
             </div>
 
             <button
