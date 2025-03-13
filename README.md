@@ -18,9 +18,9 @@ Before you begin, ensure you have the following installed:
 ## Installation
 
 1.  **Clone the repository:**
-   ```
-   git clone https://github.com/khayargoli/random-team-generator.git
-   ```
+     ```
+      git clone https://github.com/khayargoli/random-team-generator.git
+     ```
 
 3.  **Install dependencies:**
 
