@@ -9,6 +9,8 @@ const PlayerItem = forwardRef(({ player, onUpdateName, onUpdateSkill, onDelete }
   const debouncedName = useDebounce(name, 500);
 
   useEffect(() => {
+    if (debouncedName === player.name) return;
+
     if (debouncedName.trim().length === 0) {
       setError("Name must be at least 1 character");
       return;
@@ -16,7 +18,7 @@ const PlayerItem = forwardRef(({ player, onUpdateName, onUpdateSkill, onDelete }
 
     setError("");
     onUpdateName(player._id, debouncedName);
-  }, [debouncedName, player._id]);
+  }, [debouncedName]);
 
   return (
     <div className="flex items-center space-x-4">

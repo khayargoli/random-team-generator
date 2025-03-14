@@ -9,6 +9,8 @@ const TeamItem = forwardRef(({ team, onUpdateName, onDelete }, ref) => {
     const debouncedName = useDebounce(name, 500);
 
     useEffect(() => {
+        if (debouncedName === team.name) return;
+        
         if (debouncedName.trim().length === 0) {
             setError("Name must be at least 1 character");
             return;

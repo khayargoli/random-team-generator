@@ -33,7 +33,6 @@ const PlayerList = () => {
             const data = await apiClient.post(`/api/players`, newPlayer);
 
             setPlayers([...players, data]);
-
             setTimeout(() => {
                 if (inputRef.current) {
                     inputRef.current.focus();
@@ -49,7 +48,6 @@ const PlayerList = () => {
             const updatedPlayer = { name: newName };
             const data = await apiClient.put(`/api/players/${id}`, updatedPlayer);
 
-            // Update the player
             setPlayers(
                 players.map((player) =>
                     player._id === id ? { ...player, name: data.name } : player
@@ -65,7 +63,6 @@ const PlayerList = () => {
             const updatedPlayer = { skill: newSkill };
             const data = await apiClient.put(`/api/players/${id}`, updatedPlayer);
 
-            // Update the player
             setPlayers(
                 players.map((player) =>
                     player._id === id ? { ...player, skill: data.skill } : player
