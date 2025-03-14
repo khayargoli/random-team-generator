@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Button from "./ui/Button";
 
 const GenerateForm = () => {
 
@@ -34,12 +35,10 @@ const GenerateForm = () => {
                 )}
             </div>
 
-            <button
-                type="submit"
-                className="px-4 py-2 mt-4 bg-green-500 text-white rounded-md hover:bg-green-600"
-            >
+            <Button type="submit"
+                className="px-4 py-2 mt-4 bg-green-500 text-white rounded-md hover:bg-green-600">
                 Generate Teams
-            </button>
+            </Button>
         </form >
     );
 }

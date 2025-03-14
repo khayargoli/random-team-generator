@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { apiClient } from "../communicator/apiClient";
 import BalancedTeamList from "../components/BalanncedTeamList";
+import Button from "../components/ui/Button";
 
 const GenerateTeamsPage = () => {
   const location = useLocation();
@@ -59,12 +60,14 @@ const GenerateTeamsPage = () => {
           >
             {publicLink}
           </a>
-          <button
+
+          <Button
             onClick={copyToClipboard}
-            className="ml-2 px-2 py-1 text-sm bg-gray-200 rounded-md hover:bg-gray-300"
+            className="ml-2 px-2 py-1 text-sm bg-gray-200 rounded-md hover:bg-gray-300 "
           >
             {isLinkCopied ? 'Copied!' : 'Copy'}
-          </button>
+          </Button>
+          
         </div>
       )}
       <BalancedTeamList title={title} participantCount={participantCount} teams={teams} />

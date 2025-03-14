@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { apiClient } from '../communicator/apiClient';
 import TeamItem from "./TeamItem";
 import Dialog from "./Dialog";
+import Button from "./ui/Button";
 
 const TeamList = () => {
     // State to store the list of teams
@@ -93,12 +94,10 @@ const TeamList = () => {
                 ))}
             </div>
 
-            <button
-                onClick={handleAddTeam}
-                className="px-4 py-2 mt-4 bg-green-500 text-white rounded-md hover:bg-green-600"
-            >
+            <Button onClick={handleAddTeam}
+                className="px-4 py-2 mt-4 bg-green-500 text-white rounded-md hover:bg-green-600">
                 Add Team
-            </button>
+            </Button>
 
             <Dialog
                 isOpen={isDialogOpen}

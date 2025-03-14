@@ -1,6 +1,7 @@
-import React, { useEffect, useState, forwardRef  } from "react";
+import React, { useEffect, useState, forwardRef } from "react";
 
 import useDebounce from '../hooks/debounceHook';
+import Button from "./ui/Button";
 
 const PlayerItem = forwardRef(({ player, onUpdateName, onUpdateSkill, onDelete }, ref) => {
   const [name, setName] = useState(player.name);
@@ -48,12 +49,10 @@ const PlayerItem = forwardRef(({ player, onUpdateName, onUpdateSkill, onDelete }
         ))}
       </div>
 
-      <button
-        onClick={() => onDelete(player._id)}
-        className="px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600"
-      >
+      <Button onClick={() => onDelete(player._id)}
+        className="px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600">
         Delete
-      </button>
+      </Button>
     </div>
   );
 });
